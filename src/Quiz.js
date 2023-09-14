@@ -10,7 +10,8 @@ class Quiz extends Component {
 		};
 	}
 	render() {
-		return <div className="QuizQuestion"></div>;
+		const firstQuestion = quizData.quiz_questions[0];
+		return <div className="QuizQuestion">{firstQuestion.instruction_text}</div>;
 	}
 }
 
