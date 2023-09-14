@@ -31,9 +31,57 @@
 	},
 	"devDependencies": {
 		"@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
+		"babel-eslint": "10.1.0",
+		"babel-loader": "8.2.2",
+		"babel-preset-react-app": "10.0.0",
 		"babylon": "^6.18.0",
 		"chai": "^4.3.4",
+		"eslint": "7.30.0",
+		"eslint-loader": "4.0.2",
+		"eslint-plugin-import": "2.23.4",
+		"eslint-plugin-react": "7.24.0",
 		"enzyme": "^3.11.0",
-		"sinon": "^10.0.1"
+		"sinon": "^10.0.1",
+		"webpack": "5.74.0",
+		"webpack-bundle-analyzer": "4.4.2",
+		"webpack-cli": "4.10.0"
+	},
+	"babel": {
+		"presets": [
+			"babel-preset-react-app"
+		]
+	},
+	"eslintConfig": {
+		"extends": [
+			"eslint:recommended",
+			"plugin:react/recommended",
+			"plugin:import/errors",
+			"plugin:import/warnings"
+		],
+		"parser": "babel-eslint",
+		"parserOptions": {
+			"ecmaVersion": 2018,
+			"sourceType": "module",
+			"ecmaFeatures": {
+				"jsx": true
+			}
+		},
+		"env": {
+			"browser": true,
+			"node": true,
+			"es6": true
+		},
+		"rules": {
+			"no-debugger": "off",
+			"no-console": "off",
+			"no-unused-vars": "warn",
+			"react/prop-types": "warn"
+		},
+		"settings": {
+			"react": {
+				"version": "detect"
+			}
+		},
+		"root": true
 	}
 }
