@@ -4,6 +4,9 @@ import QuizQuestionButton from "./QuizQuestionButton";
 class QuizQuestion extends Component {
 	handleClick(buttonText) {
 		// Handle button click event
+		if (buttonText === this.props.quiz_question.answer) {
+			this.props.showNextQuestionHandler();
+		}
 	}
 	render() {
 		return (
