@@ -24,14 +24,10 @@ class QuizQuestion extends Component {
 		return (
 			<main>
 				<section>
-					<p>
-						{/* instruction text goes here */}
-						{this.props.quiz_question.instruction_text}
-					</p>
+					<p>{this.props.quiz_question.instruction_text}</p>
 				</section>
 				<section className="buttons">
 					<ul>
-						{/* Iterate through each answer and display buttons */}
 						{this.props.quiz_question.answer_options.map(
 							(answer_option, index) => (
 								<QuizQuestionButton
