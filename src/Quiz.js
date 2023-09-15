@@ -16,17 +16,15 @@ class Quiz extends Component {
 			this.state.quiz_position - 1 === quizData.quiz_questions.length;
 
 		return (
-			<div>
+			<>
 				{isQuizEnd ? (
 					<QuizEnd />
 				) : (
-					<div>
-						<QuizQuestion
-							quiz_question={quizData.questions[this.state.question - 1]}
-						/>
-					</div>
+					<QuizQuestion
+						quiz_question={quizData.questions[this.state.question - 1]}
+					/>
 				)}
-			</div>
+			</>
 		);
 	}
 }
