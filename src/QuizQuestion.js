@@ -13,21 +13,24 @@ class QuizQuestion extends Component {
 		// Handle button click event
 		if (buttonText === this.props.quiz_question.answer) {
 			this.props.showNextQuestionHandler();
-			// Reset incorrectAnswer state
 			this.setState({ incorrectAnswer: false });
 		} else {
-			// Display error message if the answer is incorrect
 			this.setState({ incorrectAnswer: true });
 		}
 	}
+
 	render() {
 		return (
 			<main>
 				<section>
-					<p>{this.props.quiz_question.instruction_text}</p>
+					<p>
+						{/* instruction text goes here */}
+						{this.props.quiz_question.instruction_text}
+					</p>
 				</section>
 				<section className="buttons">
 					<ul>
+						{/* Iterate through each answer and display buttons */}
 						{this.props.quiz_question.answer_options.map(
 							(answer_option, index) => (
 								<QuizQuestionButton
