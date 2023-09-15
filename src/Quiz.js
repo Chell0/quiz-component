@@ -11,8 +11,11 @@ class Quiz extends Component {
 		};
 	}
 	render() {
-		const firstQuestion = quizData.quiz_questions[0];
-		return <QuizQuestion />;
+		return (
+			<QuizQuestion
+				quiz_question={quizData.questions[this.state.question - 1]}
+			/>
+		);
 	}
 }
 
