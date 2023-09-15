@@ -13,7 +13,9 @@ class Quiz extends Component {
 	}
 
 	showNextQuestion() {
-		// TODO: Handle advancing to the next question
+		this.setState({
+			quiz_position: this.state.quiz_position + 1,
+		});
 	}
 	render() {
 		const isQuizEnd =
