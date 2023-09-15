@@ -1,14 +1,14 @@
 import { Component } from "react";
 
-class QuizQuestonButtion extends Component {
+class QuizQuestionButton extends Component {
 	// Pass
 	render() {
 		return (
 			<li>
-				<button></button>
+				<button>{this.props.button_text}</button>
 			</li>
 		);
 	}
 }
 
-export default QuizQuestionButtion;
+export default QuizQuestionButton;
