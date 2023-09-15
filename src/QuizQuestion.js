@@ -13,6 +13,11 @@ class QuizQuestion extends Component {
 		// Handle button click event
 		if (buttonText === this.props.quiz_question.answer) {
 			this.props.showNextQuestionHandler();
+			// Reset incorrectAnswer state
+			this.setState({ incorrectAnswer: false });
+		} else {
+			// Display error message if the answer is incorrect
+			this.setState({ incorrectAnswer: true });
 		}
 	}
 	render() {
