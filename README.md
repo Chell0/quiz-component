@@ -1,4 +1,4 @@
-# BUilding a Quiz Component with React
+# Building a Quiz Component with React
 
 This is a simple quiz application built using React. It allows users to answer quiz questions and provides feedback on their answers. As I go through the React Learning Program by Meta+Andela+Pluralsight.
 
